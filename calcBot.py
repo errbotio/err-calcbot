@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from botplugin import BotPlugin
 from jabberbot import botcmd
 import subprocess
