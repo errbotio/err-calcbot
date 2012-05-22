@@ -17,5 +17,5 @@ class CalcBot(BotPlugin):
             return 'ERROR: this plugin requires libqalculate with the qalc command to be installed. On gentoo it requires the readline useflag.'
         if not args:
             return 'Please give me an expression to solve'
-        p = subprocess.Popen(['/usr/bin/qalc', '-t', args], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen([CMD, '-t', args], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return p.stdout.read()
