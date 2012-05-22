@@ -1,0 +1,6 @@
+[Core]
+Name = CalcBot
+Module = calcBot
+
+[Documentation]
+Description = solve me this !
