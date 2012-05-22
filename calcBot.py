@@ -3,6 +3,8 @@
 from botplugin import BotPlugin
 from jabberbot import botcmd
 import subprocess
+import os
+
 CMD = '/usr/bin/qalc'
 class CalcBot(BotPlugin):
 
