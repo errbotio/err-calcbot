@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
-
-# Backward compatibility
-from errbot.version import VERSION
-from errbot.utils import version2array
-if version2array(VERSION) >= [1,6,0]:
-    from errbot import botcmd, BotPlugin
-else:
-    from errbot.botplugin import BotPlugin
-    from errbot.jabberbot import botcmd
+from errbot import botcmd, BotPlugin
 
 import subprocess
 import os
@@ -27,4 +19,4 @@ class CalcBot(BotPlugin):
         if not args:
             return 'Please give me an expression to solve'
         p = subprocess.Popen([CMD, '-t', args], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        return p.stdout.read()
+        return p.stdout.read().decode().strip()
