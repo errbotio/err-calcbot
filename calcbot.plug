@@ -2,5 +2,8 @@
 Name = CalcBot
 Module = calcBot
 
+[Python]
+Version = 2+
+
 [Documentation]
 Description = solve me this !
